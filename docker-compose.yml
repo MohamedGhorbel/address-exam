@@ -26,4 +26,4 @@ services:
     ports:
       - 8761:8761
 volumes:
-  mysql-volume:
+  mysql-data-compose:

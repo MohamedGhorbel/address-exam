@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  address-svc:
+    depends_on:
+      - mysql
+    restart: on-failure
+    image: address-svc
+    ports:
+      - 8083:8083
+    environment:
+      SPRING_DATASOURCE_URL:  jdbc:mysql://localhost:3306/address?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+  api-gw-service:
+    image: api-gw
+    ports:
+      - 80:9090
+
+  eureka-service:
+    image: eureka
+    ports:
+      - 8761:8761
+volumes:
+  mysql-volume:

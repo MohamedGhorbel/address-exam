@@ -32,7 +32,7 @@ pipeline {
                    bat 'docker-compose -p  address-svc up -d '
                    retry(3) {
                     timeout(2) {
-                     bat "curl http://localhost:9090/address-svc/api/address/getById"
+                     bat "curl http://localhost:8083/address-svc/api/address/getById"
                      }
                 }
                }

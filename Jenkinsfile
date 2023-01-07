@@ -22,9 +22,9 @@ pipeline {
            }
             stage('push to registory') {
                        steps {
-                          bat "docker login --username ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE_USR} --password ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE_PSW}"
-                          bat "docker tag address-svc ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE_USR}/address-svc"
-                          bat "docker push ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE_USR}/address-svc"
+                          bat "docker login --username ${MohamedGhorbel} --password ${g14765468}"
+                          bat "docker tag address-svc ${MohamedGhorbel}/address-svc"
+                          bat "docker push ${MohamedGhorbel}/address-svc"
                        }
                    }
            stage('deploy') {

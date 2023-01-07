@@ -22,9 +22,9 @@ pipeline {
            }
             stage('push to registory') {
                        steps {
-                          bat "docker login --username ${MohamedGhorbel} --password ${g14765468}"
-                          bat "docker tag address-svc ${MohamedGhorbel}/address-svc"
-                          bat "docker push ${MohamedGhorbel}/address-svc"
+                          bat "docker login --username ${mohamed.ghorbel20172018@gmail.com} --password ${g14765468}"
+                          bat "docker tag address-svc ${mohamed.ghorbel20172018@gmail.com}/address-svc"
+                          bat "docker push ${mohamed.ghorbel20172018@gmail.com}/address-svc"
                        }
                    }
            stage('deploy') {

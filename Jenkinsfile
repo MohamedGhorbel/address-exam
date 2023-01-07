@@ -22,7 +22,7 @@ pipeline {
            }
             stage('push to registory') {
                        steps {
-                          bat "docker login --username med123c --password g14765468"
+                          bat "docker login --username med123c --password g14765468"docj
                           bat "docker tag address-svc med123c/address-svc"
                           bat "docker push med123c/address-svc"
                        }
@@ -32,7 +32,7 @@ pipeline {
                    bat 'docker-compose -p  address-svc up -d '
                    retry(3) {
                     timeout(2) {
-                     bat "curl http://localhost:8083/address-svc/api/address/getById"
+                     bat "curl http://localhost:9090/address-svc/api/address/getById"
                      }
                 }
                }

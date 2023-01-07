@@ -22,9 +22,9 @@ pipeline {
            }
             stage('push to registory') {
                        steps {
-                          bat "docker login --username ${med123c} --password ${g14765468}"
-                          bat "docker tag address-svc ${med123c}/address-svc"
-                          bat "docker push ${med123c}/address-svc"
+                          bat "docker login --username med123c --password g14765468"
+                          bat "docker tag address-svc med123c/address-svc"
+                          bat "docker push med123c/address-svc"
                        }
                    }
            stage('deploy') {
